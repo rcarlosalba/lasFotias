@@ -1,0 +1,67 @@
+
+.logo, nav ul{
+  margin: 0;
+}
+.logo > img{
+  height: 70px;
+}
+nav{
+  height: 80px;
+  background-color: #000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav ul{
+  color: #FFF;
+  margin-right: 8px;
+}
+.list-menu li{
+  display: inline-block;
+  list-style: none;
+  cursor: pointer;
+  margin: 4px;
+  padding: 8px;
+}
+.list-menu li a{
+  text-decoration: none;
+  color: #FFF;
+}
+// menu responsivo
+.menu-responsive{
+  display: none !important;
+  position: absolute;
+  top: 32px;
+  right: 32px;
+  font-size: 24px;
+  color: #FFF;
+  z-index: 5;
+  cursor: pointer;
+}
+@media screen and (max-width: 768px){
+  .list-menu{
+    position: absolute;
+    top: 0;
+    z-index: 3;
+    left: -100%;
+    display: grid;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba($color: #000000, $alpha: 0.8);
+    transition: 0.5s ease-in-out;
+  }
+  .list-menu li{
+    text-align: center;
+  }
+  .list-menu li:first-child{
+    margin-top: 10%;
+  }
+  .active{
+    left: 0;
+  }
+  .menu-responsive{
+    display: block !important;
+  }
+}
